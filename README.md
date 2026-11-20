@@ -6,8 +6,8 @@ This program creates a singly linked list and provides menu-driven operations fr
 
 ## Output Screenshots
 
-![Output Screenshot 1](./Screenshot%202026-11-20%20182318.jpg)
+![Output Screenshot 1](./LINK_LIST/Screenshot%202026-11-20%20182318.jpg)
 
-![Output Screenshot 2](./Screenshot%202026-11-20%20182342.jpg)
+![Output Screenshot 2](./LINK_LIST/Screenshot%202026-11-20%20182342.jpg)
 
-![Output Screenshot 3](./Screenshot%202026-11-20%20182351.jpg)
+![Output Screenshot 3](./LINK_LIST/Screenshot%202026-11-20%20182351.jpg)
