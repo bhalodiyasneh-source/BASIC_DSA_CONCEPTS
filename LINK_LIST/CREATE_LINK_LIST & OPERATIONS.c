@@ -5,10 +5,10 @@ struct node
 {
     int info;
     struct node *link;
-}*temp,*first,*ptr,*temp_Starting,*temp_Ending,*Trans;
+}*temp,*first,*ptr,*temp_Starting,*temp_Ending,*Trans,*Aft,*spec,*ord_fst,*pela;
 void main()
 {
-    int ch;
+    int ch,m,n;
     char ch1;
     printf("\n 1 __Create link list__");
     printf("\n 2 __Display link list__");
@@ -16,7 +16,11 @@ void main()
     printf("\n 4 __Insert link node at starting _ then print Link_List__");
     printf("\n 5 __Insert link node at ending__"); 
     printf("\n 6 __Insert link node at ending _ then print Link_List__");
-    printf("\n 7 EXIT");
+    printf("\n 7 __Insert link node at specifi Position (AFTER)");
+    printf("\n 8 __Insert link node at specific position(AFTER) _ then print Link_List__");
+    printf("\n 9 __Insert link node at specific position(BEFORE) ");
+    printf("\n 10  __Insert link node at specific position(BEFORE) _ then print Link_List__");
+    printf("\n 11 EXIT");
     
     
     do
@@ -33,6 +37,7 @@ void main()
                     printf("\nEnter a value of info part\n");
                     scanf("%d",&ptr->info);
                     first=ptr;
+                    ord_fst=first;
                     printf("\n Do you continue !! Enter y   ");
                     ch1=getch();
                     while (ch1=='y')
@@ -139,8 +144,113 @@ void main()
                     }
                     break;
             case 7:
+                    
+                    if(first==NULL)
+                    {
+                        printf("Link List Not Exist!!!");
+                        break;
+                    }
+                    else
+                    {
+                        temp=first;
+                        Aft=first;
+                        printf("\nThis Case Is Specific Location At Insert A Node\n");
+                        spec=(struct node*)malloc (sizeof(struct node));
+                        printf("\nEnter a value for info part\n");
+                        scanf("%d",&spec->info); 
+                        printf("\n_Enter A Info-Value For Specific Node To Inser A New Node That Node After_\n");
+                        scanf("%d",&m);
+                        while (temp->info != m)
+                        {
+                            temp=temp->link;
+                            Aft=Aft->link;
+                        }
+                        if(temp->link != NULL)
+                        {
+                            Aft=Aft->link;
+                            temp->link=spec;
+                            spec->link=Aft;
+                        }
+                        else
+                        {
+                            temp->link=spec;
+                            spec->link=NULL;
+                        }
+                
+                        break;
+                    }
+                    
+            case 8:
+                    if(first==NULL)
+                    {
+                        printf("Link List Not Exist!!!");
+                        break;
+                    }
+                    else
+                    {
+                        printf("\n__Disply link list__ \n");
+                        ptr=first;
+                        while (ptr!=NULL)
+                        {
+                            printf("%d\n",ptr->info);
+                            ptr=ptr->link;
+                        }
+                        break;
+                    }
+            case 9:
+                    if(first==NULL)
+                    {
+                        printf("Link List Not Exist!!!");
+                        break;
+                    }
+                    else
+                    {
+                        temp=first;
+                        ptr=NULL;
+                        printf("\nThis Case Is Specific Location At Insert A Node(BEFORE)\n");
+                        pela=(struct node*)malloc (sizeof(struct node));
+                        printf("\n Enter value of info ");
+                        scanf("%d",&pela->info);
+                        printf("\n_Enter A Info-Value For Specific Node To Inser A New Node That Node Before_\n");
+                        scanf("%d",&n);
+                        while (temp->info != n)
+                        {
+                            ptr=temp;
+                            temp=temp->link;
+                        }
+                        if (ptr==NULL)
+                        {
+                            pela->link=first;
+                            first=pela;
+                        }
+                        else
+                        {
+                            pela->link=temp;
+                            ptr->link=pela;
+                        }
+                    }
+                    break;
+                    
+            case 10:
+                     if(first==NULL)
+                    {
+                        printf("Link List Not Exist!!!");
+                        break;
+                    }
+                    else
+                    {
+                        printf("\n__Disply link list__ \n");
+                        ptr=first;
+                        while (ptr!=NULL)
+                        {
+                            printf("%d\n",ptr->info);
+                            ptr=ptr->link;
+                        }
+                        break;
+                    }  
+            case 11:
                     exit(0);
-                    break;        
+                    break;
         }
     }
     while (ch !=0);
