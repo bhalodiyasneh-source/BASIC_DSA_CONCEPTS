@@ -59,4 +59,4 @@ This program (`QUEUE.c`) implements both a **Linear Queue** and a **Circular Que
 
 ## Output Screenshot
 
-![Queue Program Screenshot](Ss_Queue.jpg)
+![Queue Program Screenshot](https://github.com/bhalodiyasneh-source/BASIC_DSA_CONCEPTS/blob/main/QUEUE/Ss_Queue.jpg?raw=true)
