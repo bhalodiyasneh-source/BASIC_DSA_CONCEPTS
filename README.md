@@ -46,3 +46,17 @@ This program solves the **Tower of Hanoi** problem using recursion across three 
 
 ### Output Screenshot
 ![Tower of Hanoi Output](TOH/Screenshot%202026-11-21%20131851.jpg)
+
+# Linear and Circular Queue in C
+
+This program (`QUEUE.c`) implements both a **Linear Queue** and a **Circular Queue** within a single C program, featuring menu-driven operations numbered from **1 to 7**[cite: 1].
+
+## Key Details
+
+- The queue size entered at the beginning remains the same for both the linear queue and the circular queue operations.
+- Operations **4** and **5** belong to the circular queue, which is initialized with `a`.
+- **Note on Operation Numbers:** There are **7** operations in total, and operation number **6** is missing in the menu numbering. This is not a code error—it is simply a minor mistake in assigning the case numbers.
+
+## Output Screenshot
+
+![Queue Program Screenshot](Ss_Queue.jpg)
