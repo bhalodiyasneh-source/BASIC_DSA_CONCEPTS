@@ -32,3 +32,17 @@ This program implements an array-based **Stack** in C with a menu-driven interfa
 ### Output Screenshot
 
 ![Stack Output](STACK/ss.png)
+
+## Tower of Hanoi in C
+
+This program solves the **Tower of Hanoi** problem using recursion across three towers: **Source (`S`)**, **Helper (`H`)**, and **Destination (`D`)**[cite: 1].
+
+### Key Concept
+- It uses **3 towers/pegs**: Source, Helper, and Destination[cite: 1].
+- For `n` disks, the minimum total number of disk movements required is:
+  $$(2^{\text{Number of Disks}}) - 1$$
+- For example, with **3 disks**, the total number of movements is:
+  $$(2^3) - 1 = 8 - 1 = 7$$
+
+### Output Screenshot
+![Tower of Hanoi Output](TOH/Screenshot%202026-11-21%20131851.jpg)
